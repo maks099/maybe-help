@@ -1,11 +1,10 @@
 const express = require('express')
 const app = express()
 app.set("port", process.env.PORT || 3000);
-const port = 3000
 const requestController = require('./controllers/requestController');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/maybe_help", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/maybe_help");
 
 const db = mongoose.connection;
 db.once("open", () => {
@@ -22,5 +21,5 @@ app.get('/get', requestController.get);
 
 
 app.listen(app.get("port"), () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port ${app.get("port")}`)
 })

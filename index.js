@@ -5,7 +5,7 @@ const port = 3000
 const requestController = require('./controllers/requestController');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1/maybe_help", {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/maybe_help", {useNewUrlParser: true});
 
 const db = mongoose.connection;
 db.once("open", () => {

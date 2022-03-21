@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+app.set("port", process.env.PORT || 3000);
 const port = 3000
 const requestController = require('./controllers/requestController');
 const mongoose = require('mongoose');
@@ -20,6 +21,6 @@ app.get('/save', requestController.add);
 app.get('/get', requestController.get);
 
 
-app.listen(port, () => {
+app.listen(app.get("port"), () => {
   console.log(`Example app listening on port ${port}`)
 })

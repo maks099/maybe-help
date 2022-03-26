@@ -3,7 +3,7 @@
 
     </head>
     <body>
-        <form method="post" action="http://localhost:3000/advertisement/add">
+        <form method="post" action="https://maybe-help.herokuapp.com/advertisement/add">
             <input type="text" value="Житло" name="categoryId">
             <input type="text" value="Апартаменти" name="subCategoryId">
             <input type="text" value="user-id" name="userId">
@@ -17,5 +17,58 @@
 
             <input type="submit">
         </form>
+
+        <br>
+        <form method="get" action="https://maybe-help.herokuapp.com/advertisement/getAll">
+            <input type="submit">
+          
+        </form>
+
+        <form method="post" action="http://localhost:3000/settlement/add">
+            <input type="text" value="Довге Поле" name="name">
+            <input type="submit" value="add town">
+        </form>
+
+        <form method="get" action="http://localhost:3000/settlement/getAll">
+            <input type="submit" value="get all towns">
+          
+        </form>
+
+        <form method="post" action="http://localhost:3000/category/add">
+            <input type="text" value="Житло" name="name">
+            <input type="submit" value="add category">
+        </form>
+
+        <form method="get" action="http://localhost:3000/category/getAll">
+            <input type="submit" value="get all categoryies">
+          
+        </form>
+        -----------------------------
+
+        <form method="post" action="http://localhost:3000/subCategory/add">
+            <input type="text" value="Апартаменти" name="name">
+            <input type="submit" value="add subCategory">
+        </form>
+
+        <form method="get" action="http://localhost:3000/subCategory/getAll">
+            <input type="submit" value="get all subCategory">
+          
+        </form>
+        -----------------------------
+
+        <form method="post" action="http://localhost:3000/request/add">
+            <input type="text" value="nick" name="nickname">
+            <input type="text" value="email@gmail.com" name="email">
+            <input type="text" value="+380990854125" name="phone">
+            <input type="number" value="100" name="placesCount">
+            <input type="text" value="Коротке повідомлення" name="shortMesage">
+            <input type="submit" value="add request">
+        </form>
+
+        <form method="get" action="http://localhost:3000/request/getAll">
+            <input type="submit" value="get all requests">
+          
+        </form>
+
     </body>
 </html>

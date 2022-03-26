@@ -20,8 +20,7 @@ module.exports = {
             .save()
             .then(() => {
                 console.log('-- new adwertisement was added')
-            res.sendStatus(200);
-               
+                res.sendStatus(200);
             })
             .catch((error) => {
                 console.log(`ERROR: ${error} while adding new adwertisement`)

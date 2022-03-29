@@ -10,7 +10,10 @@ getAdvertisementParams = body => {
         description: body.description,
         date: Date(),
         freePlacesCount: body.freePlacesCount,
-        tags: body.tags
+        tags: body.tags,
+        photo: body.photo,
+        settlement: body.settlement,
+        phone: body.phone
     };
 };
 
@@ -31,6 +34,15 @@ module.exports = {
         Advertisement.find()
         .then(data => {
             res.json(data);
+        })
+        .catch(error => {
+            res.status(500);
+        })
+    },
+    deleteAll: (req, res) => {
+        Advertisement.remove()
+        .then(data => {
+            res.send('Всі оголошення видалено');
         })
         .catch(error => {
             res.status(500);

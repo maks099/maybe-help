@@ -2,7 +2,7 @@ const mongoose = require("mongoose"),
 {Schema} = mongoose,
 advertisementShema = new Schema({
     categoryId: {
-        type: String,
+        type: mongoose.ObjectId,
         required: true
     },
     subCategoryId: {
@@ -38,7 +38,16 @@ advertisementShema = new Schema({
         type: Number,
         required: true
     },
-    tags: [String]
+    tags: [String],
+    photo: {
+        type: String
+    },
+    settlement: {
+        type: String
+    },
+    phone: {
+        type: String
+    }
 });
   
 module.exports = mongoose.model("Advertisement", advertisementShema);

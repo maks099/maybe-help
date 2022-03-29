@@ -30,6 +30,7 @@ app.get('/', (req, res) => {
 // оголошення
 app.post('/advertisement/add', advertisementController.add);
 app.get('/advertisement/getAll', advertisementController.get);
+app.post('/advertisement/deleteAll', advertisementController.deleteAll);
 
 // міста /села
 app.post('/settlement/add', settlementController.add);
@@ -46,6 +47,8 @@ app.get('/subCategory/getAll', subCategoryController.getAll);
 // заявки
 app.post('/request/add', requestController.add);
 app.get('/request/getAll', requestController.getAll);
+
+app.post('/advertisement/deleteAll', advertisementController.deleteAll);
 
 
 app.listen(app.get("port"), () => {

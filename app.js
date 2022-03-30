@@ -32,6 +32,8 @@ app.get('/', (req, res) => {
 app.post('/advertisement/add', advertisementController.add);
 app.get('/advertisement/getAll', advertisementController.get);
 app.post('/advertisement/deleteAll', advertisementController.deleteAll);
+app.get('/advertisement/getBySettlement/:settlement', advertisementController.getBySettlement);
+app.get('/advertisement/getById/:id', advertisementController.getById);
 
 // міста /села
 app.post('/settlement/add', settlementController.add);

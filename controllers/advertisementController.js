@@ -33,7 +33,7 @@ module.exports = {
     },
     get: (req, res) => {
         Advertisement.find()
-        .then(data => {
+        .then(data => { 
             res.json(data);
         })
         .catch(error => {
@@ -48,6 +48,26 @@ module.exports = {
         .catch(error => {
             res.status(500);
         })
-    }
+    },
+    getBySettlement: (req, res) => {
+        const settlementName = req.params.settlement;
+        Advertisement.find({settlement: settlementName})
+        .then(data => {
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500);
+        })
+    },
+    getById: (req, res) => {
+        const id = req.params.id;
+        Advertisement.findById(id)
+        .then(data => {
+            res.json(data);
+        })
+        .catch(error => {
+            res.status(500);
+        })
+    },
     
 }

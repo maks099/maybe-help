@@ -5,6 +5,7 @@ const advertisementController = require('./controllers/advertisementController')
 settlementController = require('./controllers/settlementController'),
 categoryController = require('./controllers/categoryController'),
 subCategoryController = require('./controllers/subCategoryController'),
+serviceController = require('./controllers/serviceController'),
 requestController = require('./controllers/requestController');
 
 
@@ -47,6 +48,10 @@ app.get('/subCategory/getAll', subCategoryController.getAll);
 // заявки
 app.post('/request/add', requestController.add);
 app.get('/request/getAll', requestController.getAll);
+
+// послуги
+app.post('/service/add', serviceController.add);
+app.get('/service/getAll', serviceController.getAll);
 
 app.post('/advertisement/deleteAll', advertisementController.deleteAll);
 

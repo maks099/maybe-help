@@ -38,7 +38,7 @@ advertisementShema = new Schema({
         type: Number,
         required: true
     },
-    tags: [String],
+    tags: String,
     photo: {
         type: String
     },

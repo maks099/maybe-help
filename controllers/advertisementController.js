@@ -24,7 +24,7 @@ module.exports = {
             .save()
             .then(() => {
                 console.log('-- new adwertisement was added')
-                res.sendStatus(200);
+                res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fcreate_post.php');
             })
             .catch((error) => {
                 console.log(`ERROR: ${error} while adding new adwertisement`)

@@ -37,7 +37,7 @@ module.exports = {
             res.json(data);
         })
         .catch(error => {
-            res.log(error);
+            console.log(error);
             res.status(500);
         })
     },
@@ -47,7 +47,7 @@ module.exports = {
             res.send('Всі оголошення видалено');
         })
         .catch(error => {
-            res.log(error);
+            console.log(error);
             res.status(500);
         })
     },
@@ -58,7 +58,7 @@ module.exports = {
             res.json(data);
         })
         .catch(error => {
-            res.log(error);
+            console.log(error);
             res.status(500);
         })
     },
@@ -69,7 +69,7 @@ module.exports = {
             res.json(data);
         })
         .catch(error => {
-            res.log(error)
+            console.log(error)
             res.status(500);
         })
     },
@@ -81,7 +81,7 @@ module.exports = {
             res.json(data);
         })
         .catch(error => {
-            res.log(error)
+            console.log(error)
             res.status(500);
         })
     },
@@ -89,11 +89,11 @@ module.exports = {
         const id = req.params.id;
         Advertisement.findByIdAndUpdate(id, getAdvertisementParams(req.body))
         .then(data => {
-            res.log('adwertisement was updated');
+            console.log('adwertisement was updated');
             res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fmy_post.php');
         })
         .catch(error => {
-            res.log(error)
+            console.log(error)
             res.status(500);
         })
     },
@@ -102,11 +102,11 @@ module.exports = {
         const id = req.params.id;
         Advertisement.deleteOne({_id: id})
         .then(() => {
-            res.log('adwertisement was deleted');
+            console.log('adwertisement was deleted');
             res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fmy_post.php');
         })
         .catch(error => {
-            res.log(error)
+            console.log(error)
             res.status(500);
         })
 

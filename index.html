@@ -3,26 +3,35 @@
 
     </head>
     <body>
-        <form method="post" action="https://maybe-help.herokuapp.com/advertisement/add">
-            <input type="text" value="Житло" name="categoryId">
+        <form method="post" action="http://localhost:3000/advertisement/update/6245d30cf89fa6d7d0ca1cb5">
+            <input type="text" value="6245d1e7f89fa6d7d0ca1cb2" name="categoryId">
+            <input type="text" value="Title" name="title">
             <input type="text" value="Апартаменти" name="subCategoryId">
             <input type="text" value="user-id" name="userId">
-            <input type="number" value="0" name="cost">
-            <input type="text" value="Квартира в с. Довге Поле у Ходанича Павла бесплатно" name="title">
+            <input type="text" value="00" name="cost">
             <input type="text" value="Довгий опис" name="longDescription">
             <input type="text" value="Короткий опис" name="shortDescription">
-            <input type="date"  name="date">
+            <input type="date"  name="date" value="2000-01-12">
             <input type="number" value="1000" name="freePlacesCount">
             <input type="text" value="Тег1 Тег2" name="tags">
+            <input type="text" value="settlement" name="settlement">
+            <input type="text" value="photo" name="photo">
+            <input type="text" value="phone" name="phone">
 
             <input type="submit">
         </form>
 
         <br>
-        <form method="post" action="https://maybe-help.herokuapp.com/advertisement/deleteAll">
-            <input type="submit">
           
+        <form method="get" action="http://localhost:3000/advertisement/getAll">
+            <input type="submit" value="Отримати всі оголошення">
         </form>
+
+        <form method="get" action="http://localhost:3000/advertisement/delete/6245d30cf89fa6d7d0ca1cb5">
+            <input type="submit" value="Видалити оголошеня">
+        </form>
+
+        <!-- https://maybe-help.herokuapp.com/advertisement/deleteAll -->
 
         <form method="post" action="http://localhost:3000/settlement/add">
             <input type="text" value="Довге Поле" name="name">

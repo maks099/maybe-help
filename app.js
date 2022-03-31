@@ -35,7 +35,7 @@ app.post('/advertisement/deleteAll', advertisementController.deleteAll);
 app.get('/advertisement/getBySettlement/:settlement', advertisementController.getBySettlement);
 app.get('/advertisement/getById/:id', advertisementController.getById);
 app.get('/advertisement/getByUser/:userId', advertisementController.getByUser);
-app.get('/advertisement/update/:id', advertisementController.update);
+app.post('/advertisement/update/:id', advertisementController.update);
 app.get('/advertisement/delete/:id', advertisementController.delete);
 
 // міста /села

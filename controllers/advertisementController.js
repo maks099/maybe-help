@@ -10,7 +10,7 @@ getAdvertisementParams = body => {
         longDescription: body.longDescription,
         shortDescription: body.shortDescription,
         date: Date(),
-        userName: userName,
+        userName: body.userName,
         freePlacesCount: body.freePlacesCount,
         tags: body.tags,
         photo: body.photo,

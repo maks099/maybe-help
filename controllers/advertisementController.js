@@ -87,16 +87,22 @@ module.exports = {
         })
     },
     update: (req, res) => {
-        const id = req.params.id;
-        Advertisement.findByIdAndUpdate(id, getAdvertisementParams(req.body))
-        .then(data => {
-            console.log('adwertisement was updated');
-            res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fmy_post.php');
-        })
-        .catch(error => {
-            console.log(error)
-            res.status(500);
-        })
+        try{
+            const id = req.params.id;
+            Advertisement.findByIdAndUpdate(id, getAdvertisementParams(req.body))
+            .then(data => {
+                console.log('adwertisement was updated');
+                res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fmy_post.php');
+            })
+            .catch(error => {
+                console.log(error)
+                res.status(500);
+            })
+        }
+        catch(e){
+            console.log('error while updating advertisement');
+            res.sendStatus(500);
+        }
     },
 
     delete: (req, res) => {

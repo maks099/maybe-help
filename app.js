@@ -41,14 +41,17 @@ app.get('/advertisement/delete/:id', advertisementController.delete);
 // міста /села
 app.post('/settlement/add', settlementController.add);
 app.get('/settlement/getAll', settlementController.getAll);
+app.get('/settlement/delete/:id', settlementController.delete);
 
 // категорії
 app.post('/category/add', categoryController.add);
 app.get('/category/getAll', categoryController.getAll);
+app.get('/category/delete/:id', categoryController.delete);
 
 // підкатегорії
 app.post('/subCategory/add', subCategoryController.add);
 app.get('/subCategory/getAll', subCategoryController.getAll);
+app.get('/subCategory/delete/:id', subCategoryController.delete);
 
 // заявки
 app.post('/request/add', requestController.add);

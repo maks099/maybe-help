@@ -116,7 +116,6 @@ module.exports = {
             console.log(error)
             res.status(500);
         })
-
     }
     
 }

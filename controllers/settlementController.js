@@ -28,7 +28,7 @@ module.exports = {
         Settlement.deleteOne({_id: id})
         .then(() => {
             console.log('adwertisement was deleted');
-            res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fmy_post.php');
+            res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fall_field.php');
         })
         .catch(error => {
             console.log(error)

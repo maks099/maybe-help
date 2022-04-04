@@ -28,6 +28,19 @@ module.exports = {
         .catch(error => {
             res.status(500);
         })
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id;
+        Service.deleteOne({_id: id})
+        .then(() => {
+            console.log('service was deleted');
+            res.redirect('https://www.uhelp.uz.ua/wp-admin/admin.php?page=uhelp_api%2Finc%2Fmy_post.php');
+        })
+        .catch(error => {
+            console.log(error)
+            res.status(500);
+        })
     }
     
 }

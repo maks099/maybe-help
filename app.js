@@ -60,6 +60,8 @@ app.get('/request/getAll', requestController.getAll);
 // послуги
 app.post('/service/add', serviceController.add);
 app.get('/service/getAll', serviceController.getAll);
+app.get('/service/delete/:id', serviceController.delete);
+
 
 app.post('/advertisement/deleteAll', advertisementController.deleteAll);
 

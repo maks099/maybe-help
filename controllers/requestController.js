@@ -6,6 +6,7 @@ getRequestParams = body => {
         nickname: body.nickname,
         email: body.email,  
         phone: body.phone,
+        userId: body.userId,
         placesCount: body.placesCount,
         shortMesage: body.shortMesage
     };

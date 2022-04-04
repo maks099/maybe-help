@@ -3,10 +3,12 @@ const mongoose = require("mongoose"),
 servicesShema = new Schema({
     name: {
         type: String,
+        unique: true,
         required: true
     },
     sequenceNumber: {
         type: Number,
+        unique: true,
         required: true
     },
   

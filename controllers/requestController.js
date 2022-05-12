@@ -3,12 +3,14 @@ const Request = require("../models/request");
 //  body.nickname - означає, що у формі має бути input з name (nickname)
 getRequestParams = body => {
     return {
-        nickname: body.nickname,
+        surname: body.surname,
+        name: body.name,
         email: body.email,  
         phone: body.phone,
         userId: body.userId,
-        placesCount: body.placesCount,
-        shortMesage: body.shortMesage
+        places_count: body.places_count,
+        short_mesage: body.short_mesage,
+        advertisementId: body.advertisementId
     };
 };
 

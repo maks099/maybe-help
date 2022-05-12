@@ -1,11 +1,11 @@
 const mongoose = require("mongoose"),
 {Schema} = mongoose,
 requestShema = new Schema({
-    nickname: {
+    surname: {
         type: String,
         required: true
     },
-    userId:{
+    name:{
         type: String,
         required: true
     },
@@ -16,16 +16,23 @@ requestShema = new Schema({
     phone: {
         type: String,
     },
-    placesCount: {
+    places_count: {
         type: Number,
         required: true
     },
-    shortMesage: {
+    short_mesage: {
         type: String,
         required: true,
         max: 100 
     },
-   
+    userId: {
+        type: Number,
+        required: true
+    },
+    advertisementId: {
+        type: String,
+        required: true
+    },
 });
   
 module.exports = mongoose.model("Request", requestShema);

@@ -56,6 +56,7 @@ app.get('/subCategory/delete/:id', subCategoryController.delete);
 // заявки
 app.post('/request/add', requestController.add);
 app.get('/request/getAll', requestController.getAll);
+app.get('/request/delete/:id', requestController.delete);
 
 // послуги
 app.post('/service/add', serviceController.add);

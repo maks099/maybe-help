@@ -35,6 +35,19 @@ module.exports = {
         .catch(error => {
             res.status(500);
         })
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id;
+        Request.deleteOne({_id: id})
+        .then(() => {
+            console.log('request was deleted');
+            res.send('ok');
+        })
+        .catch(error => {
+            console.log(error)
+            res.status(500);
+        })
     }
     
 }
